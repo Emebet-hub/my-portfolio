@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive cybersecurity monitoring dashboard demo with fictional security events.">
+    <title>Cybersecurity Monitoring Dashboard | Emebet Tegenaw</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .dashboard-page { padding-top: 110px; }
+        .dashboard-shell { max-width: 1100px; }
+        .dashboard-heading { margin: 1.25rem 0 1.5rem; }
+        .dashboard-heading h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); }
+        .dashboard-heading p { color: var(--text-muted); margin-top: 0.5rem; }
+        .dashboard-notice {
+            padding: 0.8rem 1rem;
+            margin: 1.5rem 0;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background: var(--bg-card);
+            color: var(--text-secondary);
+        }
+        .dashboard-notice strong { color: var(--accent-cyan); }
+        .dashboard-metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .dashboard-metric, .dashboard-panel {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+        }
+        .dashboard-metric { padding: 1.25rem; }
+        .dashboard-metric span { display: block; color: var(--text-muted); font-size: 0.9rem; }
+        .dashboard-metric strong { display: block; margin-top: 0.4rem; font-size: 1.8rem; }
+        .dashboard-panel { padding: 1.25rem; margin-top: 1.25rem; }
+        .dashboard-panel h2 { font-size: 1.1rem; margin-bottom: 1rem; }
+        .dashboard-filters { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; }
+        .dashboard-filter {
+            padding: 0.45rem 0.8rem;
+            border: 1px solid var(--border-color);
+            border-radius: 999px;
+            color: var(--text-secondary);
+            background: transparent;
+            cursor: pointer;
+            font: inherit;
+        }
+        .dashboard-filter[aria-pressed="true"] {
+            color: var(--bg-primary);
+            background: var(--accent-cyan);
+            border-color: var(--accent-cyan);
+        }
+        .dashboard-table-wrap { overflow-x: auto; }
+        .dashboard-table { width: 100%; border-collapse: collapse; text-align: left; }
+        .dashboard-table th, .dashboard-table td {
+            padding: 0.85rem 0.75rem;
+            border-bottom: 1px solid var(--border-color);
+            white-space: nowrap;
+        }
+        .dashboard-table th { color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase; }
+        .dashboard-table td { color: var(--text-secondary); font-size: 0.9rem; }
+        .dashboard-table td:nth-child(3) { white-space: normal; min-width: 220px; }
+        .severity { font-weight: 700; }
+        .severity--critical { color: #fb7185; }
+        .severity--high { color: #fb923c; }
+        .severity--medium { color: #facc15; }
+        .severity--low { color: #34d399; }
+        .dashboard-results { color: var(--text-muted); font-size: 0.85rem; margin-top: 0.75rem; }
+        .dashboard-summary { margin-top: 1.5rem; }
+        .dashboard-summary h2 { margin-bottom: 0.5rem; }
+        .dashboard-summary p { color: var(--text-secondary); }
+        @media (max-width: 600px) {
+            .dashboard-page { padding-top: 90px; }
+            .dashboard-panel { padding: 0.85rem; }
+            .dashboard-table th, .dashboard-table td { padding: 0.7rem 0.55rem; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="../index.html#projects" class="nav__logo">← Back to Portfolio</a>
+        </nav>
+    </header>
+    <main class="section dashboard-page">
+        <div class="container dashboard-shell">
+            <div class="project__badge">Simulated Project · Fictional Data</div>
+            <div class="dashboard-heading">
+                <h1>Security Event Monitoring Dashboard</h1>
+                <p>A small interactive demo for reviewing and prioritizing sample security alerts.</p>
+            </div>
+
+            <p class="dashboard-notice"><strong>Demo only:</strong> All events, hostnames, and addresses below are fictional. This page does not connect to a SIEM or monitor live systems.</p>
+
+            <section aria-label="Event summary" class="dashboard-metrics">
+                <article class="dashboard-metric"><span>Events in sample</span><strong>8</strong></article>
+                <article class="dashboard-metric"><span>High or critical</span><strong>3</strong></article>
+                <article class="dashboard-metric"><span>Open incidents</span><strong>1</strong></article>
+                <article class="dashboard-metric"><span>Reporting window</span><strong>24h</strong></article>
+            </section>
+
+            <section class="dashboard-panel" aria-labelledby="events-title">
+                <h2 id="events-title">Recent security events</h2>
+                <div class="dashboard-filters" role="group" aria-label="Filter events by severity">
+                    <button class="dashboard-filter" type="button" data-severity="all" aria-pressed="true">All</button>
+                    <button class="dashboard-filter" type="button" data-severity="critical" aria-pressed="false">Critical</button>
+                    <button class="dashboard-filter" type="button" data-severity="high" aria-pressed="false">High</button>
+                    <button class="dashboard-filter" type="button" data-severity="medium" aria-pressed="false">Medium</button>
+                    <button class="dashboard-filter" type="button" data-severity="low" aria-pressed="false">Low</button>
+                </div>
+                <div class="dashboard-table-wrap">
+                    <table class="dashboard-table">
+                        <thead>
+                            <tr><th scope="col">Time (UTC)</th><th scope="col">Severity</th><th scope="col">Event</th><th scope="col">Source</th><th scope="col">Status</th></tr>
+                        </thead>
+                        <tbody id="event-rows">
+                            <tr data-severity="critical"><td>14:32</td><td><span class="severity severity--critical">Critical</span></td><td>Repeated login failures followed by successful authentication</td><td>auth-01.example</td><td>Investigating</td></tr>
+                            <tr data-severity="high"><td>13:57</td><td><span class="severity severity--high">High</span></td><td>Unusual outbound traffic volume detected</td><td>workstation-07.example</td><td>Open</td></tr>
+                            <tr data-severity="high"><td>12:41</td><td><span class="severity severity--high">High</span></td><td>Endpoint protection reported malware test alert</td><td>lab-pc-03.example</td><td>Contained</td></tr>
+                            <tr data-severity="medium"><td>11:26</td><td><span class="severity severity--medium">Medium</span></td><td>Multiple denied connections to a restricted service</td><td>fw-branch-02.example</td><td>Reviewed</td></tr>
+                            <tr data-severity="medium"><td>10:18</td><td><span class="severity severity--medium">Medium</span></td><td>New administrator account created</td><td>id-01.example</td><td>Reviewed</td></tr>
+                            <tr data-severity="medium"><td>09:44</td><td><span class="severity severity--medium">Medium</span></td><td>VPN login from an unfamiliar test location</td><td>vpn-01.example</td><td>Needs review</td></tr>
+                            <tr data-severity="low"><td>08:12</td><td><span class="severity severity--low">Low</span></td><td>Scheduled vulnerability scan completed</td><td>scanner-01.example</td><td>Closed</td></tr>
+                            <tr data-severity="low"><td>07:35</td><td><span class="severity severity--low">Low</span></td><td>Endpoint definition update succeeded</td><td>endpoint-12.example</td><td>Closed</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="dashboard-results" id="event-results" aria-live="polite">Showing 8 sample events</p>
+            </section>
+
+            <section class="dashboard-summary" aria-labelledby="triage-title">
+                <h2 id="triage-title">Sample triage notes</h2>
+                <p>Prioritize the critical authentication alert and correlate it with the outbound traffic event. Confirm account and endpoint activity using authorized records, document findings, and escalate according to the organization’s incident response process. The sample data does not establish that a real compromise occurred.</p>
+            </section>
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="../index.html#contact" class="btn btn-primary">Discuss This Project With Me</a>
+            </div>
+        </div>
+    </main>
+    <script>
+        const filterButtons = document.querySelectorAll('.dashboard-filter');
+        const eventRows = document.querySelectorAll('#event-rows tr');
+        const eventResults = document.getElementById('event-results');
+
+        filterButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                const severity = button.dataset.severity;
+                let visibleCount = 0;
+
+                filterButtons.forEach((filter) => {
+                    filter.setAttribute('aria-pressed', String(filter === button));
+                });
+
+                eventRows.forEach((row) => {
+                    const visible = severity === 'all' || row.dataset.severity === severity;
+                    row.hidden = !visible;
+                    if (visible) visibleCount += 1;
+                });
+
+                eventResults.textContent = `Showing ${visibleCount} sample event${visibleCount === 1 ? '' : 's'}`;
+            });
+        });
+    </script>
+</body>
+</html>

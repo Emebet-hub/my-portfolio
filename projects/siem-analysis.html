@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIEM Log Analysis & Incident Investigation | Emebet Tegenaw</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="../index.html#projects" class="nav__logo">← Back to Portfolio</a>
+        </nav>
+    </header>
+    <main class="section" style="padding-top: 120px;">
+        <div class="container" style="max-width: 800px;">
+            <div class="project__badge">Simulated Project</div>
+            <h1 class="section__title" style="text-align: left; margin-top: 1rem;">SIEM Log Analysis and Security Incident Investigation</h1>
+            <p style="color: var(--accent-cyan); margin-bottom: 2rem; font-family: 'JetBrains Mono', monospace;">Tools: FortiSIEM | Python | CSV Log Parser</p>
+            
+            <div class="about__card" style="margin-bottom: 2rem;">
+                <h3 style="color: var(--accent-cyan); margin-bottom: 0.75rem;">Scenario Overview</h3>
+                <p>A simulated enterprise environment experienced suspicious brute-force login alerts followed by anomalous outbound network telemetry from an internal workstation.</p>
+            </div>
+ 
+            <section class="sample-panel" aria-labelledby="siem-sample-title">
+                <div class="sample-panel__header">
+                    <div>
+                        <span class="sample-label">Fictional lab data · 14 May 2026 UTC</span>
+                        <h2 id="siem-sample-title">Investigation snapshot</h2>
+                    </div>
+                    <span class="sample-status">Triage complete</span>
+                </div>
+                <div class="sample-metrics">
+                    <div class="sample-metric"><span>Failed sign-ins</span><strong>16</strong><small>within 4 minutes</small></div>
+                    <div class="sample-metric"><span>Successful sign-ins</span><strong>1</strong><small>after failures</small></div>
+                    <div class="sample-metric"><span>Priority</span><strong class="sample-severity">High</strong><small>review required</small></div>
+                </div>
+                <div class="sample-table-wrap">
+                    <table class="sample-table">
+                        <caption>Selected normalized events · addresses use documentation-only ranges</caption>
+                        <thead>
+                            <tr><th scope="col">Time (UTC)</th><th scope="col">Event</th><th scope="col">Source</th><th scope="col">Outcome</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>09:14:08</td><td>Authentication failure · account: j.smith</td><td>198.51.100.24</td><td>Denied</td></tr>
+                            <tr><td>09:18:02</td><td>16 failures observed in rolling window</td><td>198.51.100.24</td><td>Threshold reached</td></tr>
+                            <tr><td>09:18:41</td><td>Authentication success · account: j.smith</td><td>198.51.100.24</td><td>Review</td></tr>
+                            <tr><td>09:23:17</td><td>Outbound volume above sample baseline</td><td>192.0.2.44</td><td>Correlate</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="sample-finding">
+                    <strong>Analyst assessment</strong>
+                    <p>The sign-in pattern and later outbound-volume alert merit investigation, but the sample alone does not confirm compromise. Validate the account activity against an authorized baseline, correlate endpoint telemetry, and follow the incident-response escalation process.</p>
+                </div>
+            </section>
+
+            <div class="about__card" style="margin-bottom: 2rem;">
+                <h3 style="color: var(--accent-cyan); margin-bottom: 0.75rem;">Objectives</h3>
+                <ul class="timeline__list">
+                    <li>Ingest and normalize simulated authentication and firewall syslogs.</li>
+                    <li>Identify brute-force login attempts against domain controllers.</li>
+                    <li>Correlate IP addresses with suspicious outbound connection spikes.</li>
+                    <li>Triage alerts by severity and prepare documented incident findings.</li>
+                </ul>
+            </div>
+
+            <div class="about__card" style="margin-bottom: 2rem;">
+                <h3 style="color: var(--accent-cyan); margin-bottom: 0.75rem;">Key Deliverables</h3>
+                <ul class="timeline__list">
+                    <li>Detailed Log Analysis Report.</li>
+                    <li>Alert Triage and Severity Prioritization Summary.</li>
+                    <li>Root-cause Incident Findings and Corrective Recommendations.</li>
+                </ul>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="../index.html#contact" class="btn btn-primary">Discuss This Project With Me</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

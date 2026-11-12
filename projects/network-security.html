@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Security Assessment & Firewall Review | Emebet Tegenaw</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="../index.html#projects" class="nav__logo">← Back to Portfolio</a>
+        </nav>
+    </header>
+    <main class="section" style="padding-top: 120px;">
+        <div class="container" style="max-width: 800px;">
+            <div class="project__badge">Simulated Project</div>
+            <h1 class="section__title" style="text-align: left; margin-top: 1rem;">Network Security Assessment and Firewall Review</h1>
+            <p style="color: var(--accent-cyan); margin-bottom: 2rem; font-family: 'JetBrains Mono', monospace;">Tools: FortiGate Lab | Draw.io | Security Checklist</p>
+            
+            <div class="about__card" style="margin-bottom: 2rem;">
+                <h3 style="color: var(--accent-cyan); margin-bottom: 0.75rem;">Scenario Overview</h3>
+                <p>A simulated multi-branch enterprise required an independent security assessment of its network topology, firewall rulebase, and remote VPN access policies.</p>
+            </div>
+
+            <section class="sample-panel" aria-labelledby="network-sample-title">
+                <div class="sample-panel__header">
+                    <div>
+                        <span class="sample-label">Fictional lab configuration · Review ID: NET-026</span>
+                        <h2 id="network-sample-title">Firewall policy review</h2>
+                    </div>
+                    <span class="sample-status">3 sample rules</span>
+                </div>
+                <div class="sample-table-wrap">
+                    <table class="sample-table">
+                        <caption>Example policy review · documentation-only network ranges</caption>
+                        <thead>
+                            <tr><th scope="col">Rule</th><th scope="col">Source</th><th scope="col">Destination / service</th><th scope="col">Finding</th><th scope="col">Priority</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>POL-014</td><td>198.51.100.0/24</td><td>192.0.2.20 · HTTPS</td><td>Expected web access</td><td><span class="sample-priority sample-priority--low">Low</span></td></tr>
+                            <tr><td>POL-027</td><td>Any</td><td>192.0.2.0/24 · Any service</td><td>Scope broader than documented need</td><td><span class="sample-priority sample-priority--high">High</span></td></tr>
+                            <tr><td>POL-031</td><td>Guest VLAN</td><td>10.20.0.0/16 · Any service</td><td>Guest-to-internal path requires review</td><td><span class="sample-priority sample-priority--medium">Medium</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="sample-finding">
+                    <strong>Sample recommendation</strong>
+                    <p>Confirm each rule against an approved business requirement, then have the network owner review and test any proposed scope reduction through the normal change-control process. This fictional table is an audit example, not a live firewall configuration.</p>
+                </div>
+                <div class="sample-network" aria-label="Illustrative segmented network flow">
+                    <span>Internet<br><small>198.51.100.0/24</small></span>
+                    <b aria-hidden="true">→</b>
+                    <span>Firewall<br><small>policy review</small></span>
+                    <b aria-hidden="true">→</b>
+                    <span>Web tier<br><small>192.0.2.0/24</small></span>
+                    <b aria-hidden="true">→</b>
+                    <span>Internal services<br><small>10.20.0.0/16</small></span>
+                </div>
+            </section>
+
+            <div class="about__card" style="margin-bottom: 2rem;">
+                <h3 style="color: var(--accent-cyan); margin-bottom: 0.75rem;">Objectives</h3>
+                <ul class="timeline__list">
+                    <li>Design and review a segmented network topology diagram.</li>
+                    <li>Audit simulated FortiGate firewall policies for over-permissive rules.</li>
+                    <li>Evaluate IPsec and SSL VPN encryption and authentication settings.</li>
+                    <li>Formulate actionable network hardening recommendations.</li>
+                </ul>
+            </div>
+
+            <div class="about__card" style="margin-bottom: 2rem;">
+                <h3 style="color: var(--accent-cyan); margin-bottom: 0.75rem;">Key Deliverables</h3>
+                <ul class="timeline__list">
+                    <li>Network Architecture Diagram.</li>
+                    <li>Firewall Policy Review and Audit Checklist.</li>
+                    <li>Risk Assessment Matrix and Hardening Report.</li>
+                </ul>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="../index.html#contact" class="btn btn-primary">Discuss This Project With Me</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
