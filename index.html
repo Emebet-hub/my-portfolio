@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emebet Tegenaw Getahun | Cybersecurity & SIEM Analyst</title>
+    <meta name="description" content="Professional portfolio of Emebet Tegenaw Getahun, Cybersecurity Analyst and SIEM Specialist with expertise in FortiSIEM, log analysis, security monitoring, and network security support.">
+    <meta name="keywords" content="Cybersecurity Analyst, SIEM Analyst, FortiSIEM Log Analysis, Security Monitoring, Security Incident Investigation, Network Security, Firewall Support">
+    
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Emebet Tegenaw Getahun | Cybersecurity & SIEM Specialist">
+    <meta property="og:description" content="Reliable Security Monitoring. Clear Analysis. Practical Cybersecurity Support.">
+    <meta property="og:type" content="website">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#home" class="nav__logo">
+                <span class="logo__icon">&lt;/&gt;</span>
+                <span class="logo__text">Emebet.T</span>
+            </a>
+            
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
+                    <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                    <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+                    <li class="nav__item"><a href="#experience" class="nav__link">Experience</a></li>
+                    <li class="nav__item"><a href="#education" class="nav__link">Education</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                </ul>
+                <div class="nav__close" id="nav-close">
+                    &times;
+                </div>
+            </div>
+
+            <div class="nav__actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+                <div class="nav__toggle" id="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="container hero__container">
+                <div class="hero__visual">
+                    <img class="hero__profile-image" src="assets/my-photo.jpg" alt="Photo of Emebet Tegenaw Getahun">
+                </div>
+                <div class="hero__content">
+                    <div class="hero__badge">
+                        <span class="badge__dot"></span> Available for International Freelance & Upwork Projects
+                    </div>
+                    <h1 class="hero__title">Cybersecurity Analyst & <span class="text-accent">SIEM Specialist</span></h1>
+                    <p class="hero__description">
+                        I help businesses understand security events, investigate suspicious activities, and improve security visibility through SIEM log analysis, security monitoring, and network security support.
+                    </p>
+                    <div class="hero__tagline">
+                        <em>"Reliable Security Monitoring. Clear Analysis. Practical Cybersecurity Support."</em>
+                    </div>
+                    <div class="hero__buttons">
+                        <a href="#projects" class="btn btn-primary">View My Projects</a>
+                        <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                        <a href="assets/documents/Emebet-cv.pdf" class="btn btn-outline" download>Download CV</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Simulated Security Analysis -->
+        <section class="section security-simulation" aria-labelledby="security-simulation-title">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title" id="security-simulation-title">Interactive Security Analysis</h2>
+                    <p class="section__subtitle">Walk through a fictional SIEM alert investigation and see how events are correlated and prioritized.</p>
+                </div>
+                <details class="triage-demo">
+                    <summary class="triage-demo__summary">
+                        <span><span class="triage-demo__eyebrow">FICTIONAL LAB CASE · SOC-1042</span><span class="triage-demo__summary-title">Interactive sign-in alert analysis</span></span>
+                        <span class="triage-demo__summary-action">Expand</span>
+                    </summary>
+                    <div class="triage-demo__content" aria-labelledby="triage-title">
+                    <div class="triage-demo__header">
+                        <div>
+                            <span class="triage-demo__eyebrow">FICTIONAL LAB CASE · CASE ID SOC-1042</span>
+                            <h3 id="triage-title">Repeated sign-in failures followed by success</h3>
+                        </div>
+                        <span class="triage-demo__severity">MEDIUM PRIORITY</span>
+                    </div>
+                    <p class="triage-demo__scenario">A demo account records repeated failed sign-ins from a documentation-only IP address, followed by a successful login. Review the event sequence, correlate the signals, and decide what to verify next.</p>
+                    <div class="analysis-table-wrap">
+                        <table class="analysis-table">
+                            <caption>Fictional SIEM events for case SOC-1042</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Time (UTC)</th>
+                                    <th scope="col">Event</th>
+                                    <th scope="col">Source</th>
+                                    <th scope="col">Outcome</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>09:14:02</td><td>Sign-in attempt · analyst-demo</td><td>203.0.113.42</td><td><span class="analysis-event analysis-event--failed">Failed</span></td></tr>
+                                <tr><td>09:14:18</td><td>Sign-in attempt · analyst-demo</td><td>203.0.113.42</td><td><span class="analysis-event analysis-event--failed">Failed</span></td></tr>
+                                <tr><td>09:15:01</td><td>Sign-in attempt · analyst-demo</td><td>203.0.113.42</td><td><span class="analysis-event analysis-event--failed">Failed</span></td></tr>
+                                <tr><td>09:15:26</td><td>Sign-in attempt · analyst-demo</td><td>203.0.113.42</td><td><span class="analysis-event analysis-event--success">Success</span></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="analysis-workflow">
+                        <h4>Analyst workflow</h4>
+                        <ol class="triage-demo__steps" id="triage-steps">
+                            <li>Validate the alert and establish the event timeline.</li>
+                            <li>Correlate the failure burst with the successful sign-in and source.</li>
+                            <li>Recommend user and MFA verification before containment decisions.</li>
+                        </ol>
+                    </div>
+                    <div class="triage-demo__footer">
+                        <p class="triage-demo__result" id="triage-result" role="status" aria-live="polite">Ready to review the fictional alert sequence.</p>
+                        <button class="btn btn-primary btn-sm" id="triage-run" type="button">Run analysis</button>
+                    </div>
+                    <p class="analysis-disclaimer">Demo only: all names, timestamps, and events are fictional. This simulation does not connect to a SIEM or perform security actions.</p>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section class="section about" id="about">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">About Me</h2>
+                    <p class="section__subtitle">Professional Background & Core Philosophy</p>
+                </div>
+                <div class="about__grid">
+                    <div class="about__card">
+                        <h3>Professional Overview</h3>
+                        <p>
+                            I am a cybersecurity and IT professional with more than four years of dedicated experience in banking IT, network administration, and security operations. My professional progression spans from robust network infrastructure management to proactive security monitoring and SIEM event investigation.
+                        </p>
+                        <p>
+                            With a strong academic foundation holding a BSc in Software Engineering from Bahir Dar University and a BA in Management from Alpha University College, I combine deep technical precision with strategic operational oversight.
+                        </p>
+                    </div>
+                    <div class="about__highlights">
+                        <div class="highlight__item">
+                            <div class="highlight__number">4+</div>
+                            <div class="highlight__label">Years Banking IT Experience</div>
+                        </div>
+                        <div class="highlight__item">
+                            <div class="highlight__number">SIEM</div>
+                            <div class="highlight__label">Log Analysis & Alert Triage</div>
+                        </div>
+                        <div class="highlight__item">
+                            <div class="highlight__number">NetSec</div>
+                            <div class="highlight__label">Firewalls & VPN Operations</div>
+                        </div>
+                        <div class="highlight__item">
+                            <div class="highlight__number">BSc</div>
+                            <div class="highlight__label">Software Engineering Degree</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="section services" id="services">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Professional Services</h2>
+                    <p class="section__subtitle">Specialized cybersecurity and network security solutions tailored for your business</p>
+                </div>
+                <div class="services__grid">
+                    <!-- Service 1 -->
+                    <div class="service__card">
+                        <div class="service__icon">🔍</div>
+                        <h3 class="service__title">SIEM Log Analysis</h3>
+                        <p class="service__desc">Configuration and detailed analysis of security event logs to extract actionable threat indicators.</p>
+                        <div class="service__details">
+                            <p><strong>Problem Addressed:</strong> Unprocessed, siloed log data leaving blind spots in enterprise visibility.</p>
+                            <p><strong>Deliverables:</strong> Comprehensive log analysis reports, correlation rule checks, and anomaly summaries.</p>
+                        </div>
+                    </div>
+                    <!-- Service 2 -->
+                    <div class="service__card">
+                        <div class="service__icon">🛡️</div>
+                        <h3 class="service__title">Security Monitoring & Alert Review</h3>
+                        <p class="service__desc">Continuous evaluation of security alerts and triage workflows to weed out false positives.</p>
+                        <div class="service__details">
+                            <p><strong>Problem Addressed:</strong> Alert fatigue and delayed identification of malicious intrusions.</p>
+                            <p><strong>Deliverables:</strong> Alert triage logs, risk prioritization matrices, and monitoring baseline reviews.</p>
+                        </div>
+                    </div>
+                    <!-- Service 3 -->
+                    <div class="service__card">
+                        <div class="service__icon">🕵️‍♂️</div>
+                        <h3 class="service__title">Security Incident Investigation</h3>
+                        <p class="service__desc">Systematic forensic investigation of suspicious activities, unauthorized logins, and breach attempts.</p>
+                        <div class="service__details">
+                            <p><strong>Problem Addressed:</strong> Ambiguity regarding the root cause and scope of a security incident.</p>
+                            <p><strong>Deliverables:</strong> Incident timeline recreation, root-cause findings, and containment recommendations.</p>
+                        </div>
+                    </div>
+                    <!-- Service 4 -->
+                    <div class="service__card">
+                        <div class="service__icon">📋</div>
+                        <h3 class="service__title">Security Reporting & Documentation</h3>
+                        <p class="service__desc">Clear, concise technical and executive reporting on security events and operational posture.</p>
+                        <div class="service__details">
+                            <p><strong>Problem Addressed:</strong> Complex security data that management or stakeholders cannot easily action.</p>
+                            <p><strong>Deliverables:</strong> Executive summaries, compliance-ready documentation, and metric dashboards.</p>
+                        </div>
+                    </div>
+                    <!-- Service 5 -->
+                    <div class="service__card">
+                        <div class="service__icon">🌐</div>
+                        <h3 class="service__title">Network Security Assessment</h3>
+                        <p class="service__desc">Evaluation of enterprise network architectures, topologies, and zone boundaries for vulnerabilities.</p>
+                        <div class="service__details">
+                            <p><strong>Problem Addressed:</strong> Misconfigured network perimeters and exposure to lateral attacks.</p>
+                            <p><strong>Deliverables:</strong> Network security assessment reports, topology reviews, and hardening checklists.</p>
+                        </div>
+                    </div>
+                    <!-- Service 6 -->
+                    <div class="service__card">
+                        <div class="service__icon">🔒</div>
+                        <h3 class="service__title">Firewall and VPN Support</h3>
+                        <p class="service__desc">Management, rule auditing, and secure configuration of enterprise firewalls and remote tunnels.</p>
+                        <div class="service__details">
+                            <p><strong>Problem Addressed:</strong> Permissive firewall rulesets and insecure remote access channels.</p>
+                            <p><strong>Deliverables:</strong> Rule audit findings, VPN policy enhancements, and implementation guidelines.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills Section -->
+        <section class="section skills" id="skills">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Technical Skills</h2>
+                    <p class="section__subtitle">Core competencies across security operations, networking, and software engineering</p>
+                </div>
+                <div class="skills__grid">
+                    <div class="skill__category">
+                        <h3>SIEM & Security Monitoring</h3>
+                        <div class="skill__tags">
+                            <span class="skill__tag">FortiSIEM</span>
+                            <span class="skill__tag">Log Analysis</span>
+                            <span class="skill__tag">Security Monitoring</span>
+                            <span class="skill__tag">Alert Triage</span>
+                            <span class="skill__tag">Incident Investigation</span>
+                            <span class="skill__tag">Security Reporting</span>
+                            <span class="skill__tag">Vulnerability Assessment</span>
+                            <span class="skill__tag">Risk Assessment</span>
+                        </div>
+                    </div>
+                    <div class="skill__category">
+                        <h3>Network Security</h3>
+                        <div class="skill__tags">
+                            <span class="skill__tag">FortiGate</span>
+                            <span class="skill__tag">FortiManager</span>
+                            <span class="skill__tag">Check Point</span>
+                            <span class="skill__tag">Firewall Management</span>
+                            <span class="skill__tag">VPN Setup & Audit</span>
+                            <span class="skill__tag">IDS / IPS</span>
+                        </div>
+                    </div>
+                    <div class="skill__category">
+                        <h3>Network Administration</h3>
+                        <div class="skill__tags">
+                            <span class="skill__tag">Network Troubleshooting</span>
+                            <span class="skill__tag">Network Monitoring</span>
+                            <span class="skill__tag">Router Configuration</span>
+                            <span class="skill__tag">Switch Configuration</span>
+                            <span class="skill__tag">Security Assessment</span>
+                            <span class="skill__tag">Documentation</span>
+                        </div>
+                    </div>
+                    <div class="skill__category">
+                        <h3>Development Skills</h3>
+                        <div class="skill__tags">
+                            <span class="skill__tag">HTML5</span>
+                            <span class="skill__tag">CSS3</span>
+                            <span class="skill__tag">JavaScript</span>
+                            <span class="skill__tag">Python</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Projects Section -->
+        <section class="section projects" id="projects">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Featured Projects</h2>
+                    <p class="section__subtitle">Simulated independent projects showcasing analytical methodologies and technical workflows</p>
+                </div>
+                <div class="projects__grid">
+                    <!-- Project 1 -->
+                    <div class="project__card">
+                        <div class="project__badge">Simulated Project</div>
+                        <h3 class="project__title">SIEM Log Analysis and Security Incident Investigation</h3>
+                        <p class="project__desc">Investigation workflow tackling simulated suspicious login alerts and unusual outbound network data transfers.</p>
+                        <div class="project__meta">
+                            <span><strong>Tools:</strong> FortiSIEM, Python, CSV Logs</span>
+                        </div>
+                        <div class="project__actions">
+                            <a href="projects/siem-analysis.html" class="btn btn-sm btn-primary">View Details</a>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="project__card">
+                        <div class="project__badge">Simulated Project</div>
+                        <h3 class="project__title">Network Security Assessment and Firewall Review</h3>
+                        <p class="project__desc">Comprehensive security evaluation of a simulated enterprise network topology and firewall rule base.</p>
+                        <div class="project__meta">
+                            <span><strong>Tools:</strong> FortiGate Lab, Draw.io, Audit Checklist</span>
+                        </div>
+                        <div class="project__actions">
+                            <a href="projects/network-security.html" class="btn btn-sm btn-primary">View Details</a>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="project__card">
+                        <div class="project__badge">Simulated Project</div>
+                        <h3 class="project__title">Cybersecurity Monitoring Dashboard</h3>
+                        <p class="project__desc">Interactive prototype dashboard organizing simulated security events, severity categories, and incident metrics.</p>
+                        <div class="project__meta">
+                            <span><strong>Tools:</strong> HTML5, CSS3, Vanilla JavaScript</span>
+                        </div>
+                        <div class="project__actions">
+                            <a href="projects/security-dashboard.html" class="btn btn-sm btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Experience Section -->
+        <section class="section experience" id="experience">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Professional Experience</h2>
+                    <p class="section__subtitle">Progressive experience in network administration and security operations</p>
+                </div>
+                <div class="timeline">
+                    <!-- Experience 1 -->
+                    <div class="timeline__item">
+                        <div class="timeline__marker"></div>
+                        <div class="timeline__content">
+                            <span class="timeline__date">July 2023 – June 2026</span>
+                            <h3 class="timeline__title">Security Operations Officer I</h3>
+                            <h4 class="timeline__company">Tsedey Bank</h4>
+                            <ul class="timeline__list">
+                                <li>Monitored security events and analyzed alerts in real time.</li>
+                                <li>Analyzed SIEM logs using FortiSIEM.</li>
+                                <li>Investigated security events and identified potential threats.</li>
+                                <li>Supported incident response and monitored firewall activity.</li>
+                                <li>Documented security incidents and prepared formal reports.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Experience 2 -->
+                    <div class="timeline__item">
+                        <div class="timeline__marker"></div>
+                        <div class="timeline__content">
+                            <span class="timeline__date">July 2022 – July 2023</span>
+                            <h3 class="timeline__title">Network Administrator</h3>
+                            <h4 class="timeline__company">Tsedey Bank</h4>
+                            <ul class="timeline__list">
+                                <li>Administered and optimized networks, resolving complex issues.</li>
+                                <li>Configured and managed firewalls and secure VPNs.</li>
+                                <li>Monitored network performance proactively.</li>
+                                <li>Configured routers and switches across branch locations.</li>
+                                <li>Maintained network security and supported reliable infrastructure.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Experience 3 -->
+                    <div class="timeline__item">
+                        <div class="timeline__marker"></div>
+                        <div class="timeline__content">
+                            <span class="timeline__date">March 2022 – July 2022</span>
+                            <h3 class="timeline__title">Junior Network Administrator</h3>
+                            <h4 class="timeline__company">Tsedey Bank</h4>
+                            <ul class="timeline__list">
+                                <li>Monitored network activity and reviewed telemetry.</li>
+                                <li>Performed initial network troubleshooting and resolved faults.</li>
+                                <li>Assisted with network device configuration and maintenance.</li>
+                                <li>Created accurate technical documentation and logs.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education and Training Section -->
+        <section class="section education" id="education">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Education & Training</h2>
+                    <p class="section__subtitle">Academic degrees and specialized professional cybersecurity training</p>
+                </div>
+                <div class="education__grid">
+                    <div class="edu__column">
+                        <h3 class="edu__heading">Academic Degrees</h3>
+                        <div class="edu__card">
+                            <h4>BSc in Software Engineering</h4>
+                            <p class="edu__institution">Bahir Dar University</p>
+                            <span class="edu__date">Completed: September 2021</span>
+                        </div>
+                        <div class="edu__card">
+                            <h4>BA in Management</h4>
+                            <p class="edu__institution">Alpha University College</p>
+                            <span class="edu__date">Completed: November 2021</span>
+                        </div>
+                    </div>
+                    <div class="edu__column">
+                        <h3 class="edu__heading">Professional Training & Certifications</h3>
+                        <div class="edu__card">
+                            <h4>Cisco Implementing Secure Solutions with VPN (SVPN)</h4>
+                            <p class="edu__institution">Deliver ICT</p>
+                            <span class="edu__date">Completed: July 2022</span>
+                        </div>
+                        <div class="edu__card">
+                            <h4>FortiGate Security NSE 4</h4>
+                            <p class="edu__institution">Deliver ICT (Addis Ababa)</p>
+                            <span class="edu__date">Completed: June 2022</span>
+                        </div>
+                        <div class="edu__card">
+                            <h4>Cybersecurity Bootcamp & Certified Ethical Hacker Training</h4>
+                            <p class="edu__institution">O'Reilly</p>
+                            <span class="edu__date">Completed: April 2026</span>
+                        </div>
+                        <div class="edu__card edu__card--certificate">
+                            <a class="edu__certificate-link" href="assets/certificates/Emebet-Tegenaw-Ceretificate.pdf" target="_blank" rel="noopener" aria-label="Open professional cybersecurity certificate">
+                                <span class="edu__certificate-overlay">Open full certificate</span>
+                                <embed class="edu__certificate-preview" src="assets/certificates/Emebet-Tegenaw-Ceretificate.pdf" type="application/pdf" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section contact" id="contact">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Get In Touch</h2>
+                    <p class="section__subtitle">Let's discuss how my expertise can support your cybersecurity and monitoring requirements</p>
+                </div>
+                <div class="contact__card">
+                    <div class="contact__intro">
+                        <span class="contact__eyebrow">CONTACT</span>
+                        <h3>Have a project in mind?</h3>
+                        <p>For freelance opportunities, SIEM analysis, or network security support, send me an email and let’s talk about how I can help.</p>
+                        <a class="contact__email-cta" href="https://mail.google.com/mail/?view=cm&amp;to=tegenawe%40gmail.com&amp;su=Portfolio%20inquiry" target="_blank" rel="noopener">
+                            <span>Email me</span>
+                            <span aria-hidden="true">→</span>
+                        </a>
+                        <span class="contact__email-address">tegenawe@gmail.com</span>
+                    </div>
+                    <div class="contact__links" aria-label="Professional profiles">
+                        <a class="contact__link" href="https://www.upwork.com/freelancers/~011cea78cd77e54c1d?mp_source=share" target="_blank" rel="noopener">
+                            <span class="contact__link-icon" aria-hidden="true">💼</span>
+                            <span class="contact__link-copy">
+                                <strong>Upwork</strong>
+                                <span>Freelance profile</span>
+                            </span>
+                            <span class="contact__link-arrow" aria-hidden="true">↗</span>
+                        </a>
+                        <a class="contact__link" href="https://www.linkedin.com/in/emebet-tegenaw-867a26238" target="_blank" rel="noopener">
+                            <span class="contact__link-icon" aria-hidden="true">🔗</span>
+                            <span class="contact__link-copy">
+                                <strong>LinkedIn</strong>
+                                <span>Professional network</span>
+                            </span>
+                            <span class="contact__link-arrow" aria-hidden="true">↗</span>
+                        </a>
+                        <a class="contact__link" href="https://github.com/Emebet-hub" target="_blank" rel="noopener">
+                            <span class="contact__link-icon" aria-hidden="true">💻</span>
+                            <span class="contact__link-copy">
+                                <strong>GitHub</strong>
+                                <span>Code and projects</span>
+                            </span>
+                            <span class="contact__link-arrow" aria-hidden="true">↗</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__brand">
+                <h3>Emebet Tegenaw Getahun</h3>
+                <p>Cybersecurity Analyst | SIEM Specialist</p>
+            </div>
+            <div class="footer__socials">
+                <a href="https://www.upwork.com/freelancers/~011cea78cd77e54c1d?mp_source=share" target="_blank" rel="noopener">Upwork</a>
+                <a href="https://www.linkedin.com/in/emebet-tegenaw-867a26238" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://github.com/Emebet-hub" target="_blank" rel="noopener">GitHub</a>
+            </div>
+            <div class="footer__copyright">
+                <p>&copy; 2026 Emebet Tegenaw Getahun. All rights reserved.</p>
+            </div>
+        </div>
+        <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
